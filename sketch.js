@@ -16,7 +16,7 @@ function draw() {
   print(mouseX, mouseY);
   push();
   translate(random(-width*.05, width*.05),random(height*.1, height*.15));
-  rotateY(millis() / 1000);
+  rotateY(frameCount() / 1000);
 dandelion();
   pop();
 
