@@ -70,7 +70,7 @@ class Bubble{
 
   edge(){
     if (this.loc.y < 0){
-      this.loc.y = height-50;
+      this.loc.y = height+50;
     }
   }
 }
