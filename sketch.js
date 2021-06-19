@@ -1,7 +1,8 @@
 let float = [];
 
 function setup() {
-  createCanvas(windowWidth, window Height,  WEBGL);
+  createCanvas(windowWidth, window Height,
+);
   frameRate(12);
   let num = width*.3;
   for (let i = 0; i < num; i++){
@@ -16,7 +17,7 @@ function draw() {
   print(mouseX, mouseY);
   push();
   translate(random(-width*.05, width*.05),random(height*.1, height*.15));
-  rotateY(frameCount() / 1000);
+  //rotateY(frameCount() / 1000);
 dandelion();
   pop();
 
