@@ -16,17 +16,12 @@ function draw() {
   background(random(50), 0.5);
   colorMode(HSB);
   print(mouseX, mouseY);
-  strokeWeight(random(10));
-  //Ripples
-  noFill();
-  stroke(random(100, 250), random(360), random(200,360));
-  circle(width*.5, height*.25, rad);
-  rad += random(5);
-  //flower
+  
   push();
   translate(random(-width*.05, width*.05),random(height*.1, height*.15));
-  //rotateY(frameCount() / 1000);
-dandelion();
+  ripples();
+  rad += random(5);
+  dandelion();
   pop();
 
   for (let i = 0; i < float.length; i++){
@@ -61,6 +56,13 @@ function dandelion(){
     line(width*.5, height*.25, random(width*0.5-100, width*0.5+100), random(height*0.25-150,height*0.25+50));
   }
 }
+
+function ripples() {
+  strokeWeight(random(10));
+  noFill();
+  stroke(random(100, 250), random(360), random(200,360));
+  circle(width*.5, height*.25, rad);
+} 
 
 class Bubble{
   constructor(){
