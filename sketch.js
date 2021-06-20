@@ -17,7 +17,8 @@ function draw() {
   colorMode(HSB);
   print(mouseX, mouseY);
   strokeWeight(random(10));
-  stroke(random(100, 250), random(360), random(200,360), 0.6);
+  //Ripples
+  stroke(random(100, 250), random(360), random(200,360));
   circle(width*.5, height*.25, rad);
   push();
   translate(random(-width*.05, width*.05),random(height*.1, height*.15));
