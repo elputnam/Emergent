@@ -1,10 +1,11 @@
 let float = []
-let rad = 0;
+var rad;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(12);
   let num = width*.3;
+  let rad = 0;
   for (let i = 0; i < num; i++){
     float.push(new Bubble());
   }
@@ -15,7 +16,7 @@ function draw() {
   background(random(50), 0.5);
   colorMode(HSB);
   print(mouseX, mouseY);
-  strokeWeight(random(10);
+  strokeWeight(random(10));
   stroke(random(100, 250), random(360), random(200,360), 0.6);
   circle(width*.5, height*.25, rad);
   push();
