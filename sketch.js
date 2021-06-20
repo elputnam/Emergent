@@ -1,8 +1,7 @@
 let float = [];
 
 function setup() {
-  createCanvas(windowWidth, window Height,
-);
+  createCanvas(windowWidth, windowHeight);
   frameRate(12);
   let num = width*.3;
   for (let i = 0; i < num; i++){
