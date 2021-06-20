@@ -1,11 +1,11 @@
 let float = []
-var rad;
+let rad = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(12);
   let num = width*.3;
-  let rad = 0;
+  //let rad = 0;
   for (let i = 0; i < num; i++){
     float.push(new Bubble());
   }
@@ -16,11 +16,11 @@ function draw() {
   background(random(50), 0.5);
   colorMode(HSB);
   print(mouseX, mouseY);
-  
+  ripples();
   push();
   translate(random(-width*.05, width*.05),random(height*.1, height*.15));
-  ripples();
-  rad += random(5);
+  
+  rad += 10;
   dandelion();
   pop();
 
@@ -49,6 +49,7 @@ function dandelion(){
   curveVertex(width*0.5, height*0.25);
   curveVertex(width*0.5, height*0.25);
   endShape();
+  
   //flower head
   strokeWeight(5);
   for (i = 0; i < 70; i++){
@@ -60,8 +61,8 @@ function dandelion(){
 function ripples() {
   strokeWeight(random(10));
   noFill();
-  stroke(random(100, 250), random(360), random(200,360));
-  circle(width*.5, height*.25, rad);
+  stroke(random(100, 250), random(360), random(200,360), random(0.3, 0.7));
+  circle(width*.5, height*.35, rad);
 } 
 
 class Bubble{
