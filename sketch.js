@@ -18,8 +18,11 @@ function draw() {
   print(mouseX, mouseY);
   strokeWeight(random(10));
   //Ripples
+  noFill();
   stroke(random(100, 250), random(360), random(200,360));
   circle(width*.5, height*.25, rad);
+  rad += random(5);
+  //flower
   push();
   translate(random(-width*.05, width*.05),random(height*.1, height*.15));
   //rotateY(frameCount() / 1000);
@@ -31,7 +34,7 @@ dandelion();
     float[i].update();
     float[i].edge();
   }
-  rad += random(5);
+
   if (rad > width){
     rad = 0;
  } 
