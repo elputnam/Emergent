@@ -1,4 +1,5 @@
-let float = [];
+let float = []
+let rad = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -14,6 +15,9 @@ function draw() {
   background(random(50), 0.5);
   colorMode(HSB);
   print(mouseX, mouseY);
+  strokeWeight(random(10);
+  stroke(random(100, 250), random(360), random(200,360), 0.6);
+  circle(width*.5, height*.25, rad);
   push();
   translate(random(-width*.05, width*.05),random(height*.1, height*.15));
   //rotateY(frameCount() / 1000);
@@ -25,7 +29,10 @@ dandelion();
     float[i].update();
     float[i].edge();
   }
-
+  rad += random(5);
+  if (rad > width){
+    rad = 0;
+ } 
 }
 
 function dandelion(){
