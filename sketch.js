@@ -90,3 +90,7 @@ class Bubble{
     }
   }
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
